@@ -1,11 +1,14 @@
 class Graph:
+    # Build the graph's adj_list consstractor
     def __init__(self):
         self.adj_list = {}
 
+    # print the graph by calling the print_graph() method
     def print_graph(self):
         for vertex in self.adj_list:
             print(f"{vertex}: {self.adj_list[vertex]}")
 
+    # adding new vertex if the vertex wasn't duplicated
     def add_vertex(self, vertex):
         if vertex not in self.adj_list.keys():
             self.adj_list[vertex] = {}
@@ -14,6 +17,7 @@ class Graph:
         
         return False
 
+    # adding connections or edges between the vertex by giving start vertex and ending vertex, weight of the edge and a variable that specifies the type of the connections between the two vertex
     def add_edge(self, v1, v2, weight, bidirectional=1):
         if v1 in self.adj_list.keys() and v2 in self.adj_list.keys():
             if bidirectional == 1:
@@ -27,16 +31,17 @@ class Graph:
         
         return False
     
-
+    # removing the edge between the two vertex
     def remove_edge(self, v1, v2):
-        if v1 in self.adj_list.keys() and v2 in self.adj_list.keys():
+        if v1 in self.adj_list.keys():
             self.adj_list[v1].remove(v2)
-            self.adj_list[v2].remove(v1)
 
-            return True
+        if v2 in self.adj_list.keys():
+            self.adj_list[v2].remove(v1)
         
-        return False
+        return True
     
+    # removing a vertex from the graph
     def remove_vertex(self, vertex):
         if vertex in self.adj_list.keys():
             for other_vertex in self.adj_list[vertex]:
