@@ -2,6 +2,7 @@ from Graph.Graph_Class import Graph
 from DoublyLinkedList.DoublyLinkedList_Class import DoublyLinkedList
 from DepthFirst_Algorithm.DepthFirst_Class import depthFirst
 from Dijkstra_Algorithm.Dijkstra_method import dijkstra_algorithm
+from Plot_the_graph.PlotGraph import Plot
     
 graph = Graph()
 
@@ -37,3 +38,5 @@ pathes = depthFirst(graph.get_nodes(), "Reykjavik", [])
 
 for path in pathes:
     print(path)
+
+Plot(graph)
