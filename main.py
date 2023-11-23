@@ -25,15 +25,15 @@ graph.add_edge("Athens", "Belgrade", 1, 1)
 graph.add_edge("Rome", "Berlin", 2, 1)
 graph.add_edge("Rome", "Athens", 2, 1)
 
-# graph.print_graph()
-
-# print(graph)
-
-
-# print(graph.weight("a", "b"))
-
 previous_nodes, shortest_path = dijkstra_algorithm(graph=graph, start_node="Reykjavik")
-print(previous_nodes)
+
+print("Finding the shortest path using the Dijkstra Algorithm:")
 print(shortest_path)
 
-# Dijkstra(graph, "a", "d")
+print("\n\n")
+
+print("Find the all possible pathes by Depth First Algorithm:")
+pathes = depthFirst(graph.get_nodes(), "Reykjavik", [])
+
+for path in pathes:
+    print(path)
