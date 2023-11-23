@@ -61,3 +61,9 @@ class Graph:
     
     def weight(self, node, neighbor):
         return self.adj_list[node][neighbor]
+    
+    def len_vertecies(self):
+        return len(list(self.adj_list))
+    
+    def get_vertecies(self):
+        return list(self.adj_list.keys())
