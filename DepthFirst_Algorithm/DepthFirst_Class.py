@@ -1,6 +1,7 @@
 visitedList = [[]]
 
 # this is the depth first algorithm impelementation
+# it's work with the "recurcive function" method
 def depthFirst(graph, currentVertex, visited):
     visited.append(currentVertex)
 
