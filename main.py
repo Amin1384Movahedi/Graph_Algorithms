@@ -2,6 +2,7 @@ import math
 import sys
 from Graph.Graph_Class import Graph
 from DoublyLinkedList.DoublyLinkedList_Class import DoublyLinkedList
+from DepthFirst_Algorithm.DepthFirst_Class import depthFirst
 
     
 def Dijkstra(graph, initial, endpoint):
