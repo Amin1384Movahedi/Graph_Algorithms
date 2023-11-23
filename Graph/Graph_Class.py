@@ -53,17 +53,22 @@ class Graph:
         
         return False
     
+    # return the adj_list
     def get_nodes(self):
         return self.adj_list
     
+    # return all the outgoing vertecies from the given node
     def get_outgoing_edges(self, node):
         return list(self.adj_list[node].keys())
     
+    # return the weight of the edge by the given node and neighbor
     def weight(self, node, neighbor):
         return self.adj_list[node][neighbor]
     
+    # return the number of vertecies in the graph
     def len_vertecies(self):
         return len(list(self.adj_list))
     
+    # return the vertecies
     def get_vertecies(self):
         return list(self.adj_list.keys())
