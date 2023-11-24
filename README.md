@@ -8,6 +8,8 @@ it's also takes edges with weights that tells the distance between two vertecies
 Depth-first search is an algorithm for traversing or searching tree or graph data structures. <br />
 The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.<br /><br />
 
+![Depth First Search](https://github.com/Amin1384Movahedi/Graph_Algorithms/blob/main/assets/DepthFirstSearch.gif)
+
 we have a mothod which is called depthFirst(), it's worked with the recurcive algorithm<br />
 it's takes the graph, a starting node and a empty list then the function return a list that include all of the possible pathes which is starts from the given starting node.<br />
 
