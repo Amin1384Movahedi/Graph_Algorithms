@@ -28,18 +28,23 @@ def Plot(graph):
     if len(possitions) > num_of_vertecies:
         possitions = random.sample(possitions, num_of_vertecies)
 
-    # extracting x and y from possition tuple
-    x = []
-    y = []
+    each_vertex_possitions = {}
 
-    for i in possitions:
-        x.append(i[0])
-        y.append(i[1])
+    for i, vertex in enumerate(vertecies_names):
+        each_vertex_possitions[vertex] = possitions[i]
 
-    plt.scatter(x, y)
+    for vertex in each_vertex_possitions:
+        plt.scatter(each_vertex_possitions[vertex][0], each_vertex_possitions[vertex][1])
+        plt.text(each_vertex_possitions[vertex][0], each_vertex_possitions[vertex][1], vertex, va="bottom", ha="center")
 
-    # label each of point with vertex's name
-    for i, (xi, yi) in enumerate(zip(x, y)):
-        plt.text(xi, yi, vertecies_names[i], va='bottom', ha='center')
+        for outgoing_edges in graph.get_outgoing_edges(vertex):
+            weight = graph.weight(vertex, outgoing_edges)
+            x = [each_vertex_possitions[vertex][0], each_vertex_possitions[outgoing_edges][0]]
+            y = [each_vertex_possitions[vertex][1], each_vertex_possitions[outgoing_edges][1]]
+            mid = [(x[0] + x[1]) / 2, (y[0] + y[1]) / 2]
+
+            plt.text(mid[0], mid[1], weight, va="bottom", ha="center")
+
+            plt.plot(x, y)
 
     plt.show()
