@@ -13,7 +13,7 @@ it's takes the graph, a starting node and a empty list then the function return 
 
 # Dijstra's Algorithm
 
-![Dijkstra Algorithm](https://github.com/Amin1384Movahedi/Graph_Algorithms/assets/Dijkstra.gif)
+![Dijkstra Algorithm](https://github.com/Amin1384Movahedi/Graph_Algorithms/blob/main/assets/Dijkstra.gif)
 
    1. Mark the source node with a current distance of 0 and the rest with infinity.
    2. Set the non-visited node with the smallest current distance as the current node.
@@ -28,7 +28,7 @@ This process continues until the destination vertex is reached, or all reachable
 
 # Plot the graph with matplotlib
 
-![Graph Plotting](https://github.com/Amin1384Movahedi/Graph_Algorithms/assets/PlottedGraph.png)
+![Graph Plotting](https://github.com/Amin1384Movahedi/Graph_Algorithms/blob/main/assets/PlottedGraph.png)
 
 there is a function that called PlotGraph<br />
 it's just take the graph, then it's generate some random possitions in a circle pattern for each vertex<br />
