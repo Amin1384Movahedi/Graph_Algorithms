@@ -3,6 +3,7 @@ from DoublyLinkedList.DoublyLinkedList_Class import DoublyLinkedList
 from DepthFirst_Algorithm.DepthFirst_Class import depthFirst
 from Dijkstra_Algorithm.Dijkstra_method import dijkstra_algorithm
 from Plot_the_graph.PlotGraph import Plot
+from EulerChecker.euler import check
     
 graph = Graph()
 
@@ -40,3 +41,5 @@ for path in pathes:
     print(path)
 
 Plot(graph)
+
+check(graph)
